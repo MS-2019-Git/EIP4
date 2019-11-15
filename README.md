@@ -1,5 +1,5 @@
 # EIP4
-Print Score Result [0.0028064302265603754, 0.9996]
+Print Score Result [0.17091783548227282, 0.9863]
 
 1.Convolution- It is a method used to make the network learn and find out the edges,gradients,textures of the iput image. These are then combined to create the parts of objects and then an object.Convolution translates the input image through multiple layers.
 
