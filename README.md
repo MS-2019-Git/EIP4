@@ -1,10 +1,10 @@
 # EIP4
 Assignment2 :
 
-The strategy followed based on the 8 DNN codes:
-1) No use of bias.Thus,added use_bias=False
-2) The last convolution is sacrosanct. Thus removed Batchnormation() and Dropout() from it.
-3) After training this network with batch_size=32 and epochs=20,i have observed each epoch run took 35s to 36s and for the 20th epoch, 
+The strategy followed based on the given 8 DNN codes:
+1) No use of bias. Thus,added use_bias=False
+2) The last convolution layer is sacrosanct. Thus removed Batchnormation() and Dropout() from it.
+3) After training this network with batch_size=32 and epochs=20, have observed each epoch run took 35s to 36s and for the 20th epoch, 
    the acc=0.9995 , val_acc=0.9903  , which clearly states the problem of overfitting(OF).
    
 Epoch 00020: LearningRateScheduler setting learning rate to 0.000424869.
@@ -17,6 +17,7 @@ Thus, introduced Dropout(0.1) after every convolution layer.
    Trainable params: 10,980
    Non-trainable params: 180
 5) Score:
+
 
 
 
