@@ -1,4 +1,16 @@
 # EIP4
+Assignment2 :
+
+The strategy followed based on the 8 DNN codes:
+1) No use of bias. Added use_bias=False
+2) The last convolution is sacrosanct. Thus removed Batchnormation() and Dropout() from it.
+3) Dropout of 0.1 is added after every convolution layer.
+4) Parameters :
+5) Score:
+
+
+
+Assignment1 :
 Print Score Result [0.17091783548227282, 0.9863]
 
 1.Convolution- It is a method used to make the network learn and find out the edges,gradients,textures of the iput image. These are then combined to create the parts of objects and then an object.Convolution translates the input image through multiple layers.
