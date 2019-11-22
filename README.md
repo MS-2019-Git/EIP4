@@ -2,10 +2,20 @@
 Assignment2 :
 
 The strategy followed based on the 8 DNN codes:
-1) No use of bias. Added use_bias=False
+1) No use of bias.Thus,added use_bias=False
 2) The last convolution is sacrosanct. Thus removed Batchnormation() and Dropout() from it.
-3) Dropout of 0.1 is added after every convolution layer.
-4) Parameters :
+3) After training this network with batch_size=32 and epochs=20,i have observed each epoch run took 35s to 36s and for the 20th epoch, 
+   the acc=0.9995 , val_acc=0.9903  , which clearly states the problem of overfitting(OF).
+   
+Epoch 00020: LearningRateScheduler setting learning rate to 0.000424869.
+60000/60000 [==============================] - 36s 600us/step - loss: 0.0021 - acc: 0.9995 - val_loss: 0.0397 - val_acc: 0.9903
+<keras.callbacks.History at 0x7f34b6a8c7f0>
+
+Thus, introduced Dropout(0.1) after every convolution layer.
+4) Dropout of 0.1 is added after every convolution layer.
+5) Total params: 11,160
+   Trainable params: 10,980
+   Non-trainable params: 180
 5) Score:
 
 
