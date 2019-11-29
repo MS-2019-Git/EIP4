@@ -107,7 +107,8 @@ Model took 452.59 seconds to train
 
 
 
-2) Strategy used for the network model of assignment 3:
+2) Strategy used for the network model of assignment 3
+-------------------------------------------------------
 
  A)  To implement Depthwise Separable convolution used SeparableConv2D with no bias. This helped to reduce the no. of parameters to less      than 100,000. This works in 2 phases: convolve with 3X3X1 for each channel and then combines it using 1X1X#channelsX#filters.
      Thus the output image size remains equal to the input size but with increased no. of channels.
@@ -119,21 +120,21 @@ Model took 452.59 seconds to train
  D) Used Activation function ReLu to attain the non-linearity.
  
  E) After the model to predict now i was able to see for few epochs , the val_acc is almost same or higher than the acc value.
- Epoch 50/50
-390/390 [==============================] - 16s 41ms/step - loss: 0.2710 - acc: 0.9040 - val_loss: 0.5443 - val_acc: 0.8348
-
    Therefore, dropout to a value of 0.1 is added to prevent this problem of overfitting by making the model learn from all of its inputs    instead of sample inputs.
    
  F) To increase the dataset to be trained, utilized the dataaugmentation code with horizonal flip with a shift of 50%.
  G) Calculated the output,receptive field and jump at each level.
  
- H) The learning rate used is 0.003 with ADAM algorithm.(When the model is trained  with 0.001 nad 0.005 as well but recievd 82.62% and     83.3%). Finally with 0.003 lr , the model got a test accuracy of % with 128 batch_size and 50 epochs.
+ H) The learning rate used is 0.003 with ADAM algorithm.(When the model is trained  with 0.001 nad 0.005 as well but recievd 82.62% and     83.3%). Finally with 0.003 lr , the model got a test accuracy of 84.10 % with 128 batch_size and 50 epochs.
  
  I) The assignment3 model is trained with : Total params: 76,561
                            Trainable params: 75,197
                            Non-trainable params: 1,364
+                           
+ J) Achieved 84.10% at the 41th epoch.                          
  
  Calculation: For Input Image of 32X32X3	
+ ----------------------------------------------
  
 (k,p,s)|Input|Output|RF|Jump
 
@@ -162,48 +163,252 @@ model.add(Activation('relu'))
 model.add(SeparableConv2D(32, 3, 3, border_mode='same',use_bias=False)) # 32 , RF 5X5
 model.add(Activation('relu'))
 model.add(BatchNormalization())
-model.add(Dropout(0.1))
 
 model.add(MaxPooling2D(pool_size=(2, 2))) #16,RF 6X6
+model.add(Dropout(0.1))
 
 model.add(SeparableConv2D(64, 3, 3, border_mode='same',use_bias=False)) #16,RF 10X10
 model.add(Activation('relu'))
 model.add(BatchNormalization())
-model.add(Dropout(0.1))
 
 model.add(SeparableConv2D(64, 3, 3, border_mode='same',use_bias=False))#16, RF 14x14
 model.add(BatchNormalization())
 model.add(Activation('relu'))
 
 model.add(MaxPooling2D(pool_size=(2, 2)))#8, RF 16x16
+model.add(Dropout(0.1))
 
 model.add(SeparableConv2D(128, 3, 3, border_mode='same',use_bias=False))#8, RF 24x24
 model.add(Activation('relu'))
 model.add(BatchNormalization())
-model.add(Dropout(0.1))
 
 model.add(SeparableConv2D(128, 3, 3, border_mode='same',use_bias=False))#8, RF 32x32
 model.add(Activation('relu'))
 model.add(BatchNormalization())
-model.add(Dropout(0.1))
 
 model.add(MaxPooling2D(pool_size=(2, 2)))#4, RF 36X36
+model.add(Dropout(0.1))
 
 model.add(SeparableConv2D(256, 3, 3, border_mode='same',use_bias=False))#4, RF 52x52
 model.add(Activation('relu'))
 model.add(BatchNormalization())
-model.add(Dropout(0.1))
 
 model.add(SeparableConv2D(10,3,3,border_mode='same',use_bias=False))#4 ,RF 68x68
 model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Dropout(0.1))
 
-model.add(SeparableConv2D(10, 4))#2, RF 84X84
+model.add(SeparableConv2D(10, 4))
 model.add(Flatten())
 model.add(Activation('softmax'))
 
 model.summary()
+
+LOG of the model:
+------------------------
+Epoch 1/50
+
+Epoch 00001: LearningRateScheduler setting learning rate to 0.003.
+390/390 [==============================] - 53s 135ms/step - loss: 0.6209 - acc: 0.7904 - val_loss: 0.8235 - val_acc: 0.7379
+Epoch 2/50
+
+Epoch 00002: LearningRateScheduler setting learning rate to 0.0022744503.
+390/390 [==============================] - 11s 28ms/step - loss: 0.5348 - acc: 0.8120 - val_loss: 0.8648 - val_acc: 0.7246
+Epoch 3/50
+
+Epoch 00003: LearningRateScheduler setting learning rate to 0.0018315018.
+390/390 [==============================] - 11s 28ms/step - loss: 0.5035 - acc: 0.8221 - val_loss: 0.7032 - val_acc: 0.7709
+Epoch 4/50
+
+Epoch 00004: LearningRateScheduler setting learning rate to 0.0015329586.
+390/390 [==============================] - 11s 28ms/step - loss: 0.4773 - acc: 0.8345 - val_loss: 0.6122 - val_acc: 0.7965
+Epoch 5/50
+
+Epoch 00005: LearningRateScheduler setting learning rate to 0.0013181019.
+390/390 [==============================] - 11s 28ms/step - loss: 0.4602 - acc: 0.8388 - val_loss: 0.5512 - val_acc: 0.8188
+Epoch 6/50
+
+Epoch 00006: LearningRateScheduler setting learning rate to 0.0011560694.
+390/390 [==============================] - 12s 30ms/step - loss: 0.4394 - acc: 0.8470 - val_loss: 0.5906 - val_acc: 0.8046
+Epoch 7/50
+
+Epoch 00007: LearningRateScheduler setting learning rate to 0.0010295127.
+390/390 [==============================] - 13s 33ms/step - loss: 0.4236 - acc: 0.8523 - val_loss: 0.5983 - val_acc: 0.8026
+Epoch 8/50
+
+Epoch 00008: LearningRateScheduler setting learning rate to 0.0009279307.
+390/390 [==============================] - 12s 31ms/step - loss: 0.4098 - acc: 0.8539 - val_loss: 0.5489 - val_acc: 0.8219
+Epoch 9/50
+
+Epoch 00009: LearningRateScheduler setting learning rate to 0.0008445946.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3972 - acc: 0.8595 - val_loss: 0.5459 - val_acc: 0.8209
+Epoch 10/50
+
+Epoch 00010: LearningRateScheduler setting learning rate to 0.0007749935.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3870 - acc: 0.8632 - val_loss: 0.5104 - val_acc: 0.8316
+Epoch 11/50
+
+Epoch 00011: LearningRateScheduler setting learning rate to 0.0007159905.
+390/390 [==============================] - 12s 30ms/step - loss: 0.3756 - acc: 0.8672 - val_loss: 0.5320 - val_acc: 0.8300
+Epoch 12/50
+
+Epoch 00012: LearningRateScheduler setting learning rate to 0.000665336.
+390/390 [==============================] - 12s 31ms/step - loss: 0.3639 - acc: 0.8708 - val_loss: 0.5413 - val_acc: 0.8243
+Epoch 13/50
+
+Epoch 00013: LearningRateScheduler setting learning rate to 0.0006213753.
+390/390 [==============================] - 12s 31ms/step - loss: 0.3617 - acc: 0.8726 - val_loss: 0.5548 - val_acc: 0.8234
+Epoch 14/50
+
+Epoch 00014: LearningRateScheduler setting learning rate to 0.0005828638.
+390/390 [==============================] - 12s 30ms/step - loss: 0.3523 - acc: 0.8739 - val_loss: 0.5394 - val_acc: 0.8307
+Epoch 15/50
+
+Epoch 00015: LearningRateScheduler setting learning rate to 0.0005488474.
+390/390 [==============================] - 11s 29ms/step - loss: 0.3435 - acc: 0.8773 - val_loss: 0.5342 - val_acc: 0.8299
+Epoch 16/50
+
+Epoch 00016: LearningRateScheduler setting learning rate to 0.0005185825.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3398 - acc: 0.8795 - val_loss: 0.5385 - val_acc: 0.8305
+Epoch 17/50
+
+Epoch 00017: LearningRateScheduler setting learning rate to 0.000491481.
+390/390 [==============================] - 11s 29ms/step - loss: 0.3353 - acc: 0.8797 - val_loss: 0.5349 - val_acc: 0.8296
+Epoch 18/50
+
+Epoch 00018: LearningRateScheduler setting learning rate to 0.0004670715.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3293 - acc: 0.8825 - val_loss: 0.5157 - val_acc: 0.8357
+Epoch 19/50
+
+Epoch 00019: LearningRateScheduler setting learning rate to 0.0004449718.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3220 - acc: 0.8850 - val_loss: 0.5271 - val_acc: 0.8324
+Epoch 20/50
+
+Epoch 00020: LearningRateScheduler setting learning rate to 0.000424869.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3219 - acc: 0.8869 - val_loss: 0.5303 - val_acc: 0.8329
+Epoch 21/50
+
+Epoch 00021: LearningRateScheduler setting learning rate to 0.0004065041.
+390/390 [==============================] - 11s 29ms/step - loss: 0.3158 - acc: 0.8864 - val_loss: 0.5238 - val_acc: 0.8352
+Epoch 22/50
+
+Epoch 00022: LearningRateScheduler setting learning rate to 0.000389661.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3106 - acc: 0.8891 - val_loss: 0.5107 - val_acc: 0.8396
+Epoch 23/50
+
+Epoch 00023: LearningRateScheduler setting learning rate to 0.0003741581.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3110 - acc: 0.8900 - val_loss: 0.5276 - val_acc: 0.8332
+Epoch 24/50
+
+Epoch 00024: LearningRateScheduler setting learning rate to 0.0003598417.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3043 - acc: 0.8905 - val_loss: 0.5225 - val_acc: 0.8360
+Epoch 25/50
+
+Epoch 00025: LearningRateScheduler setting learning rate to 0.0003465804.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3019 - acc: 0.8917 - val_loss: 0.5284 - val_acc: 0.8355
+Epoch 26/50
+
+Epoch 00026: LearningRateScheduler setting learning rate to 0.0003342618.
+390/390 [==============================] - 11s 28ms/step - loss: 0.3000 - acc: 0.8931 - val_loss: 0.5181 - val_acc: 0.8371
+Epoch 27/50
+
+Epoch 00027: LearningRateScheduler setting learning rate to 0.0003227889.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2929 - acc: 0.8939 - val_loss: 0.5287 - val_acc: 0.8351
+Epoch 28/50
+
+Epoch 00028: LearningRateScheduler setting learning rate to 0.0003120774.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2940 - acc: 0.8950 - val_loss: 0.5219 - val_acc: 0.8354
+Epoch 29/50
+
+Epoch 00029: LearningRateScheduler setting learning rate to 0.000302054.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2875 - acc: 0.8964 - val_loss: 0.5350 - val_acc: 0.8330
+Epoch 30/50
+
+Epoch 00030: LearningRateScheduler setting learning rate to 0.0002926544.
+390/390 [==============================] - 11s 27ms/step - loss: 0.2889 - acc: 0.8970 - val_loss: 0.5323 - val_acc: 0.8384
+Epoch 31/50
+
+Epoch 00031: LearningRateScheduler setting learning rate to 0.0002838221.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2834 - acc: 0.8984 - val_loss: 0.5361 - val_acc: 0.8367
+Epoch 32/50
+
+Epoch 00032: LearningRateScheduler setting learning rate to 0.0002755074.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2825 - acc: 0.8984 - val_loss: 0.5485 - val_acc: 0.8297
+Epoch 33/50
+
+Epoch 00033: LearningRateScheduler setting learning rate to 0.000267666.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2839 - acc: 0.8979 - val_loss: 0.5332 - val_acc: 0.8382
+Epoch 34/50
+
+Epoch 00034: LearningRateScheduler setting learning rate to 0.0002602585.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2797 - acc: 0.9005 - val_loss: 0.5303 - val_acc: 0.8406
+Epoch 35/50
+
+Epoch 00035: LearningRateScheduler setting learning rate to 0.00025325.
+390/390 [==============================] - 11s 29ms/step - loss: 0.2772 - acc: 0.9008 - val_loss: 0.5468 - val_acc: 0.8339
+Epoch 36/50
+
+Epoch 00036: LearningRateScheduler setting learning rate to 0.0002466091.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2812 - acc: 0.8992 - val_loss: 0.5297 - val_acc: 0.8394
+Epoch 37/50
+
+Epoch 00037: LearningRateScheduler setting learning rate to 0.0002403076.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2687 - acc: 0.9039 - val_loss: 0.5375 - val_acc: 0.8356
+Epoch 38/50
+
+Epoch 00038: LearningRateScheduler setting learning rate to 0.0002343201.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2747 - acc: 0.9012 - val_loss: 0.5337 - val_acc: 0.8358
+Epoch 39/50
+
+Epoch 00039: LearningRateScheduler setting learning rate to 0.0002286237.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2694 - acc: 0.9045 - val_loss: 0.5257 - val_acc: 0.8394
+Epoch 40/50
+
+Epoch 00040: LearningRateScheduler setting learning rate to 0.0002231977.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2684 - acc: 0.9042 - val_loss: 0.5289 - val_acc: 0.8410
+Epoch 41/50
+
+Epoch 00041: LearningRateScheduler setting learning rate to 0.0002180233.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2672 - acc: 0.9018 - val_loss: 0.5283 - val_acc: 0.8406
+Epoch 42/50
+
+Epoch 00042: LearningRateScheduler setting learning rate to 0.0002130833.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2626 - acc: 0.9048 - val_loss: 0.5390 - val_acc: 0.8376
+Epoch 43/50
+
+Epoch 00043: LearningRateScheduler setting learning rate to 0.0002083623.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2648 - acc: 0.9054 - val_loss: 0.5350 - val_acc: 0.8363
+Epoch 44/50
+
+Epoch 00044: LearningRateScheduler setting learning rate to 0.0002038459.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2634 - acc: 0.9043 - val_loss: 0.5285 - val_acc: 0.8391
+Epoch 45/50
+
+Epoch 00045: LearningRateScheduler setting learning rate to 0.0001995211.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2606 - acc: 0.9069 - val_loss: 0.5267 - val_acc: 0.8401
+Epoch 46/50
+
+Epoch 00046: LearningRateScheduler setting learning rate to 0.0001953761.
+390/390 [==============================] - 11s 27ms/step - loss: 0.2622 - acc: 0.9044 - val_loss: 0.5305 - val_acc: 0.8400
+Epoch 47/50
+
+Epoch 00047: LearningRateScheduler setting learning rate to 0.0001913998.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2578 - acc: 0.9072 - val_loss: 0.5312 - val_acc: 0.8407
+Epoch 48/50
+
+Epoch 00048: LearningRateScheduler setting learning rate to 0.0001875821.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2556 - acc: 0.9088 - val_loss: 0.5322 - val_acc: 0.8405
+Epoch 49/50
+
+Epoch 00049: LearningRateScheduler setting learning rate to 0.0001839137.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2589 - acc: 0.9071 - val_loss: 0.5354 - val_acc: 0.8387
+Epoch 50/50
+
+Epoch 00050: LearningRateScheduler setting learning rate to 0.000180386.
+390/390 [==============================] - 11s 28ms/step - loss: 0.2521 - acc: 0.9088 - val_loss: 0.5429 - val_acc: 0.8373
+Model took 595.91 seconds to train
+
+Accuracy on test data is: 83.73
 
 
 
