@@ -133,8 +133,10 @@ Model took 452.59 seconds to train
                            Trainable params: 75,197
                            Non-trainable params: 1,364
  
- Calculation: For Input Image of 32X32X3				
+ Calculation: For Input Image of 32X32X3	
+ 
 (k,p,s)|Input|Output|RF|Jump
+
 (3,1,1)	 32	   32	  3X3 	1
 (3,1,1)	 32	   32	  5X5	 1
 (2,0,2)	 32	   16	  6X6	 2
