@@ -111,10 +111,21 @@ Model took 1045.25 seconds to train
 
  A)  To implement Depthwise Separable convolution used SeparableConv2D with no bias. This helped to reduce the no. of parameters to less      than 100,000. This works in 2 phases: convolve with 3X3X1 for each channel and then combines it using 1X1X#channelsX#filters.
      Thus the output image size remains equal to the input size but with increased no. of channels.
- B) Removed dense layers as they work as fully connected layers
+     
+ B) Removed dense layers as they work as fully connected layers.
+ 
  C) Used Batch normalization to normalize the channels . As features and weight will be at similar scale.
+ 
  D) Used Activation function ReLu to attain the non-linearity.
- E) Used dropout to a value of 0.1
+ 
+ E) After the model to predict now i was able to see for few epochs , the val_acc is almost same or higher than the acc value.
+ Epoch 50/50
+390/390 [==============================] - 16s 41ms/step - loss: 0.2710 - acc: 0.9040 - val_loss: 0.5443 - val_acc: 0.8348
+
+   Therefore, dropout to a value of 0.1 is added to prevent this problem of overfitting.
+   
+ F) To increase the dataset to be trained, utilized the dataaugmentation code with horizonal flip with a shift of 50%.
+ G) Calculated the output,receptive field and jump at each level.
  
 
 
