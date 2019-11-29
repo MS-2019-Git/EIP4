@@ -107,6 +107,17 @@ Model took 1045.25 seconds to train
 
 
 
+2) Strategy used for the network model of assignment 3:
+
+ A)  To implement Depthwise Separable convolution used SeparableConv2D with no bias. This helped to reduce the no. of parameters to less      than 100,000. This works in 2 phases: convolve with 3X3X1 for each channel and then combines it using 1X1X#channelsX#filters.
+     Thus the output image size remains equal to the input size but with increased no. of channels.
+ B) Removed dense layers as they work as fully connected layers
+ C) Used Batch normalization to normalize the channels . As features and weight will be at similar scale.
+ D) Used Activation function ReLu to attain the non-linearity.
+ E) Used dropout to a value of 0.1
+ 
+
+
 
 
 
