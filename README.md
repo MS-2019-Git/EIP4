@@ -1,109 +1,109 @@
 # EIP4
 Assignment 3:
 
-1) Base network validation accuracy and log:   Accuracy on test data is: 82.79
+1) Base network validation accuracy and log:   Accuracy on test data is: 82.96
 
-Epoch 1/50
-390/390 [==============================] - 30s 77ms/step - loss: 1.8503 - acc: 0.2845 - val_loss: 1.4858 - val_acc: 0.4423
+390/390 [==============================] - 18s 46ms/step - loss: 1.8517 - acc: 0.2901 - val_loss: 1.4679 - val_acc: 0.4633
 Epoch 2/50
-390/390 [==============================] - 20s 51ms/step - loss: 1.3615 - acc: 0.5065 - val_loss: 1.1583 - val_acc: 0.5838
+390/390 [==============================] - 9s 22ms/step - loss: 1.3247 - acc: 0.5172 - val_loss: 1.1024 - val_acc: 0.6037
 Epoch 3/50
-390/390 [==============================] - 20s 52ms/step - loss: 1.1040 - acc: 0.6059 - val_loss: 1.0074 - val_acc: 0.6464
+390/390 [==============================] - 9s 22ms/step - loss: 1.0996 - acc: 0.6100 - val_loss: 0.9347 - val_acc: 0.6694
 Epoch 4/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.9628 - acc: 0.6623 - val_loss: 0.8764 - val_acc: 0.6974
+390/390 [==============================] - 9s 23ms/step - loss: 0.9537 - acc: 0.6674 - val_loss: 0.8596 - val_acc: 0.7069
 Epoch 5/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.8621 - acc: 0.7027 - val_loss: 0.7920 - val_acc: 0.7272
+390/390 [==============================] - 9s 23ms/step - loss: 0.8469 - acc: 0.7078 - val_loss: 0.7689 - val_acc: 0.7354
 Epoch 6/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.7818 - acc: 0.7323 - val_loss: 0.7529 - val_acc: 0.7435
+390/390 [==============================] - 9s 22ms/step - loss: 0.7804 - acc: 0.7326 - val_loss: 0.8390 - val_acc: 0.7219
 Epoch 7/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.7304 - acc: 0.7504 - val_loss: 0.7291 - val_acc: 0.7522
+390/390 [==============================] - 9s 22ms/step - loss: 0.7358 - acc: 0.7479 - val_loss: 0.7439 - val_acc: 0.7486
 Epoch 8/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.6858 - acc: 0.7669 - val_loss: 0.6739 - val_acc: 0.7741
+390/390 [==============================] - 9s 23ms/step - loss: 0.6798 - acc: 0.7683 - val_loss: 0.6456 - val_acc: 0.7831
 Epoch 9/50
-390/390 [==============================] - 20s 53ms/step - loss: 0.6552 - acc: 0.7788 - val_loss: 0.6456 - val_acc: 0.7779
+390/390 [==============================] - 9s 23ms/step - loss: 0.6465 - acc: 0.7807 - val_loss: 0.6349 - val_acc: 0.7882
 Epoch 10/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.6250 - acc: 0.7855 - val_loss: 0.6331 - val_acc: 0.7888
+390/390 [==============================] - 9s 23ms/step - loss: 0.6122 - acc: 0.7928 - val_loss: 0.6049 - val_acc: 0.7915
 Epoch 11/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.5911 - acc: 0.7981 - val_loss: 0.6459 - val_acc: 0.7872
+390/390 [==============================] - 9s 23ms/step - loss: 0.5841 - acc: 0.8003 - val_loss: 0.6133 - val_acc: 0.7991
 Epoch 12/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.5757 - acc: 0.8050 - val_loss: 0.6613 - val_acc: 0.7795
+390/390 [==============================] - 9s 23ms/step - loss: 0.5615 - acc: 0.8100 - val_loss: 0.6483 - val_acc: 0.7881
 Epoch 13/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.5559 - acc: 0.8138 - val_loss: 0.6182 - val_acc: 0.7936
+390/390 [==============================] - 9s 23ms/step - loss: 0.5412 - acc: 0.8160 - val_loss: 0.5872 - val_acc: 0.8088
 Epoch 14/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.5278 - acc: 0.8200 - val_loss: 0.5916 - val_acc: 0.8025
+390/390 [==============================] - 9s 23ms/step - loss: 0.5284 - acc: 0.8206 - val_loss: 0.5781 - val_acc: 0.8119
 Epoch 15/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.5243 - acc: 0.8236 - val_loss: 0.5869 - val_acc: 0.8024
+390/390 [==============================] - 9s 23ms/step - loss: 0.5141 - acc: 0.8233 - val_loss: 0.5643 - val_acc: 0.8146
 Epoch 16/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.4960 - acc: 0.8311 - val_loss: 0.5957 - val_acc: 0.8051
+390/390 [==============================] - 9s 23ms/step - loss: 0.4972 - acc: 0.8315 - val_loss: 0.5910 - val_acc: 0.8070
 Epoch 17/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.4907 - acc: 0.8336 - val_loss: 0.5845 - val_acc: 0.8085
+390/390 [==============================] - 9s 23ms/step - loss: 0.4851 - acc: 0.8347 - val_loss: 0.5682 - val_acc: 0.8126
 Epoch 18/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.4833 - acc: 0.8344 - val_loss: 0.5864 - val_acc: 0.8067
+390/390 [==============================] - 9s 23ms/step - loss: 0.4683 - acc: 0.8409 - val_loss: 0.5725 - val_acc: 0.8116
 Epoch 19/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.4687 - acc: 0.8407 - val_loss: 0.6147 - val_acc: 0.7995
+390/390 [==============================] - 9s 23ms/step - loss: 0.4594 - acc: 0.8437 - val_loss: 0.5776 - val_acc: 0.8172
 Epoch 20/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.4640 - acc: 0.8427 - val_loss: 0.5815 - val_acc: 0.8113
+390/390 [==============================] - 9s 23ms/step - loss: 0.4534 - acc: 0.8460 - val_loss: 0.5555 - val_acc: 0.8211
 Epoch 21/50
-390/390 [==============================] - 21s 55ms/step - loss: 0.4449 - acc: 0.8484 - val_loss: 0.5823 - val_acc: 0.8090
+390/390 [==============================] - 9s 23ms/step - loss: 0.4370 - acc: 0.8512 - val_loss: 0.5673 - val_acc: 0.8139
 Epoch 22/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.4370 - acc: 0.8510 - val_loss: 0.5872 - val_acc: 0.8155
+390/390 [==============================] - 9s 23ms/step - loss: 0.4322 - acc: 0.8521 - val_loss: 0.5705 - val_acc: 0.8186
 Epoch 23/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.4266 - acc: 0.8547 - val_loss: 0.5806 - val_acc: 0.8156
+390/390 [==============================] - 9s 23ms/step - loss: 0.4209 - acc: 0.8582 - val_loss: 0.5858 - val_acc: 0.8125
 Epoch 24/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.4194 - acc: 0.8571 - val_loss: 0.5944 - val_acc: 0.8140
+390/390 [==============================] - 9s 23ms/step - loss: 0.4100 - acc: 0.8597 - val_loss: 0.5860 - val_acc: 0.8167
 Epoch 25/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.4114 - acc: 0.8607 - val_loss: 0.5729 - val_acc: 0.8136
+390/390 [==============================] - 9s 23ms/step - loss: 0.4098 - acc: 0.8606 - val_loss: 0.5774 - val_acc: 0.8118
 Epoch 26/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.4042 - acc: 0.8625 - val_loss: 0.5735 - val_acc: 0.8171
+390/390 [==============================] - 9s 23ms/step - loss: 0.4038 - acc: 0.8631 - val_loss: 0.5771 - val_acc: 0.8192
 Epoch 27/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.3980 - acc: 0.8644 - val_loss: 0.5891 - val_acc: 0.8161
+390/390 [==============================] - 9s 23ms/step - loss: 0.3891 - acc: 0.8683 - val_loss: 0.5672 - val_acc: 0.8195
 Epoch 28/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.3925 - acc: 0.8663 - val_loss: 0.5861 - val_acc: 0.8150
+390/390 [==============================] - 9s 23ms/step - loss: 0.3773 - acc: 0.8729 - val_loss: 0.6040 - val_acc: 0.8153
 Epoch 29/50
-390/390 [==============================] - 21s 55ms/step - loss: 0.3936 - acc: 0.8676 - val_loss: 0.5965 - val_acc: 0.8170
+390/390 [==============================] - 9s 23ms/step - loss: 0.3759 - acc: 0.8736 - val_loss: 0.5726 - val_acc: 0.8175
 Epoch 30/50
-390/390 [==============================] - 21s 55ms/step - loss: 0.3778 - acc: 0.8725 - val_loss: 0.5639 - val_acc: 0.8221
+390/390 [==============================] - 9s 23ms/step - loss: 0.3722 - acc: 0.8733 - val_loss: 0.5803 - val_acc: 0.8258
 Epoch 31/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.3748 - acc: 0.8738 - val_loss: 0.5733 - val_acc: 0.8234
+390/390 [==============================] - 9s 23ms/step - loss: 0.3699 - acc: 0.8750 - val_loss: 0.6202 - val_acc: 0.8080
 Epoch 32/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.3764 - acc: 0.8737 - val_loss: 0.6568 - val_acc: 0.8044
+390/390 [==============================] - 9s 23ms/step - loss: 0.3619 - acc: 0.8777 - val_loss: 0.6089 - val_acc: 0.8183
 Epoch 33/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3660 - acc: 0.8766 - val_loss: 0.5935 - val_acc: 0.8171
+390/390 [==============================] - 9s 23ms/step - loss: 0.3630 - acc: 0.8771 - val_loss: 0.5925 - val_acc: 0.8241
 Epoch 34/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3651 - acc: 0.8762 - val_loss: 0.5807 - val_acc: 0.8234
+390/390 [==============================] - 9s 23ms/step - loss: 0.3521 - acc: 0.8805 - val_loss: 0.5595 - val_acc: 0.8282
 Epoch 35/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3651 - acc: 0.8764 - val_loss: 0.6006 - val_acc: 0.8187
+390/390 [==============================] - 9s 23ms/step - loss: 0.3479 - acc: 0.8836 - val_loss: 0.6015 - val_acc: 0.8213
 Epoch 36/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3458 - acc: 0.8835 - val_loss: 0.5780 - val_acc: 0.8249
+390/390 [==============================] - 9s 23ms/step - loss: 0.3447 - acc: 0.8831 - val_loss: 0.6253 - val_acc: 0.8151
 Epoch 37/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3474 - acc: 0.8817 - val_loss: 0.6285 - val_acc: 0.8107
+390/390 [==============================] - 9s 23ms/step - loss: 0.3475 - acc: 0.8834 - val_loss: 0.5826 - val_acc: 0.8262
 Epoch 38/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3490 - acc: 0.8828 - val_loss: 0.5853 - val_acc: 0.8205
+390/390 [==============================] - 9s 23ms/step - loss: 0.3354 - acc: 0.8870 - val_loss: 0.5961 - val_acc: 0.8179
 Epoch 39/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3458 - acc: 0.8837 - val_loss: 0.5685 - val_acc: 0.8229
+390/390 [==============================] - 9s 23ms/step - loss: 0.3397 - acc: 0.8856 - val_loss: 0.5959 - val_acc: 0.8277
 Epoch 40/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3432 - acc: 0.8841 - val_loss: 0.5860 - val_acc: 0.8231
+390/390 [==============================] - 9s 23ms/step - loss: 0.3224 - acc: 0.8927 - val_loss: 0.5866 - val_acc: 0.8164
 Epoch 41/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3337 - acc: 0.8887 - val_loss: 0.6081 - val_acc: 0.8184
+390/390 [==============================] - 9s 23ms/step - loss: 0.3310 - acc: 0.8902 - val_loss: 0.6073 - val_acc: 0.8217
 Epoch 42/50
-390/390 [==============================] - 20s 52ms/step - loss: 0.3245 - acc: 0.8909 - val_loss: 0.6012 - val_acc: 0.8200
+390/390 [==============================] - 9s 23ms/step - loss: 0.3222 - acc: 0.8918 - val_loss: 0.5704 - val_acc: 0.8297
 Epoch 43/50
-390/390 [==============================] - 22s 56ms/step - loss: 0.3292 - acc: 0.8886 - val_loss: 0.5829 - val_acc: 0.8273
+390/390 [==============================] - 9s 23ms/step - loss: 0.3261 - acc: 0.8914 - val_loss: 0.5928 - val_acc: 0.8213
 Epoch 44/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.3284 - acc: 0.8904 - val_loss: 0.5837 - val_acc: 0.8225
+390/390 [==============================] - 9s 23ms/step - loss: 0.3194 - acc: 0.8929 - val_loss: 0.6074 - val_acc: 0.8235
 Epoch 45/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.3223 - acc: 0.8939 - val_loss: 0.5933 - val_acc: 0.8245
+390/390 [==============================] - 9s 23ms/step - loss: 0.3256 - acc: 0.8912 - val_loss: 0.5831 - val_acc: 0.8266
 Epoch 46/50
-390/390 [==============================] - 21s 53ms/step - loss: 0.3235 - acc: 0.8930 - val_loss: 0.5961 - val_acc: 0.8247
+390/390 [==============================] - 9s 23ms/step - loss: 0.3066 - acc: 0.8976 - val_loss: 0.6111 - val_acc: 0.8203
 Epoch 47/50
-390/390 [==============================] - 21s 54ms/step - loss: 0.3151 - acc: 0.8957 - val_loss: 0.5801 - val_acc: 0.8254
+390/390 [==============================] - 9s 23ms/step - loss: 0.3014 - acc: 0.8977 - val_loss: 0.6060 - val_acc: 0.8222
 Epoch 48/50
-390/390 [==============================] - 21s 55ms/step - loss: 0.3119 - acc: 0.8965 - val_loss: 0.6011 - val_acc: 0.8240
+390/390 [==============================] - 9s 23ms/step - loss: 0.3109 - acc: 0.8962 - val_loss: 0.5976 - val_acc: 0.8180
 Epoch 49/50
-390/390 [==============================] - 21s 55ms/step - loss: 0.3206 - acc: 0.8951 - val_loss: 0.5824 - val_acc: 0.8262
+390/390 [==============================] - 9s 23ms/step - loss: 0.3131 - acc: 0.8963 - val_loss: 0.6161 - val_acc: 0.8235
 Epoch 50/50
-390/390 [==============================] - 21s 55ms/step - loss: 0.3183 - acc: 0.8954 - val_loss: 0.5764 - val_acc: 0.8279
-Model took 1045.25 seconds to train
+390/390 [==============================] - 9s 23ms/step - loss: 0.3112 - acc: 0.8971 - val_loss: 0.5766 - val_acc: 0.8296
+Model took 452.59 seconds to train
+
 
 
 
@@ -122,13 +122,72 @@ Model took 1045.25 seconds to train
  Epoch 50/50
 390/390 [==============================] - 16s 41ms/step - loss: 0.2710 - acc: 0.9040 - val_loss: 0.5443 - val_acc: 0.8348
 
-   Therefore, dropout to a value of 0.1 is added to prevent this problem of overfitting.
+   Therefore, dropout to a value of 0.1 is added to prevent this problem of overfitting by making the model learn from all of its inputs    instead of sample inputs.
    
  F) To increase the dataset to be trained, utilized the dataaugmentation code with horizonal flip with a shift of 50%.
  G) Calculated the output,receptive field and jump at each level.
  
+ H) The learning rate used is 0.003 with ADAM algorithm.(When the model is trained  with 0.001 nad 0.005 as well but recievd 82.62% and     83.3%). Finally with 0.003 lr , the model got a test accuracy of % with 128 batch_size and 50 epochs.
+ 
+ I) The assignment3 model is trained with : Total params: 76,561
+                           Trainable params: 75,197
+                           Non-trainable params: 1,364
+ 
 
+Model Definition:
+---------------------
+# Define the model for assignment3
+from keras.layers import SeparableConv2D
+model = Sequential()
 
+model.add(SeparableConv2D(32, 3, 3, border_mode='same', input_shape=(32, 32, 3))) # 32 , RF 3X3
+model.add(Activation('relu'))
+
+model.add(SeparableConv2D(32, 3, 3, border_mode='same',use_bias=False)) # 32 , RF 5X5
+model.add(Activation('relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(MaxPooling2D(pool_size=(2, 2))) #16,RF 6X6
+
+model.add(SeparableConv2D(64, 3, 3, border_mode='same',use_bias=False)) #16,RF 10X10
+model.add(Activation('relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(SeparableConv2D(64, 3, 3, border_mode='same',use_bias=False))#16, RF 14x14
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+
+model.add(MaxPooling2D(pool_size=(2, 2)))#8, RF 16x16
+
+model.add(SeparableConv2D(128, 3, 3, border_mode='same',use_bias=False))#8, RF 24x24
+model.add(Activation('relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(SeparableConv2D(128, 3, 3, border_mode='same',use_bias=False))#8, RF 32x32
+model.add(Activation('relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(MaxPooling2D(pool_size=(2, 2)))#4, RF 36X36
+
+model.add(SeparableConv2D(256, 3, 3, border_mode='same',use_bias=False))#4, RF 52x52
+model.add(Activation('relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(SeparableConv2D(10,3,3,border_mode='same',use_bias=False))#4 ,RF 68x68
+model.add(Activation('relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(SeparableConv2D(10, 4))#2, RF 84X84
+model.add(Flatten())
+model.add(Activation('softmax'))
+
+model.summary()
 
 
 
