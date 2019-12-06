@@ -1,3 +1,9 @@
+Assignment 4 RESNET WITH CUTOUT AND GRADCAM
+-------------------------------------------
+
+Have tried 8 models of Resnet with v1 and V2 , data augmentation, different learning rates,CutOuts. Observed the val_acc for each network. Then presented the final code with 88.51% acuuracy with cutout and gradcam.
+
+
 Code1_ Resnet20V1 
 ------------------
 with params=274,442 with real-time data augmentation lr=0.001 batch_size=32 epochs=30 
@@ -53,30 +59,51 @@ Test accuracy: 0.843
 
 Code7_ Resnet20V1_withCutOut_modifiedlr
 ---------------------------------------
-
-lr = 0.01 
-    if epoch > 30:
-        lr *= 0.1   
-    if epoch > 20:
-        lr *= 0.1
-    elif epoch > 10:
-        lr *= 0.1
+with params=274,442 with real-time data augmentation and CutOut(pixel_level=False) batch_size=128 epochs=50
+modified lr:
+  lr = 0.01 
+      if epoch > 30:
+          lr *= 0.1   
+      if epoch > 20:
+          lr *= 0.1
+      elif epoch > 10:
+          lr *= 0.1
 Test loss: 0.5430240948200226
 Test accuracy: 0.8542
 
 
 Code8_ Resnet20V1_withCutOut_withmodifiedlr
 ---------------------------------------
-
- lr = 0.001 
-    if epoch > 50:
-        lr *= 0.1   
-    if epoch > 40:
-        lr *= 0.1
-    elif epoch > 30:
-        lr *= 0.1
+with params=274,442 with real-time data augmentation and CutOut(pixel_level=False) batch_size=128 epochs=50
+modified lr:
+   lr = 0.001 
+      if epoch > 50:
+          lr *= 0.1   
+      if epoch > 40:
+          lr *= 0.1
+      elif epoch > 30:
+          lr *= 0.1
 
 Test loss: 0.484324564409256
-Test accuracy: 0.8851
+Test accuracy: 0.8851  
+               
+               
+FinalCode_ Resnet20V1_CutOut_GradCam
+-------------------------------------------
+with params=274,442 with real-time data augmentation and CutOut(pixel_level=False) batch_size=128 epochs=50
+modified lr:
+   lr = 0.001 
+      if epoch > 50:
+          lr *= 0.1   
+      if epoch > 40:
+          lr *= 0.1
+      elif epoch > 30:
+          lr *= 0.1
+
+Test loss: 0.484324564409256
+Test accuracy: 0.8851  
+               ------
+
+
    
 
