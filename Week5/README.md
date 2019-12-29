@@ -1,3 +1,11 @@
+Executed the code with different model and weights. Implemented cut out and data augmentation.
+Final Code Result:
+---------------------
+{'age_output_acc': 0.35080645161290325, 'age_output_loss': 5.5875885563512, 'bag_output_acc': 0.6038306451612904, 'bag_output_loss': 3.610886966028521, 'emotion_output_acc': 0.6244959677419355, 'emotion_output_loss': 3.4993795118024273, 'footwear_output_acc': 0.6219758064516129, 'footwear_output_loss': 3.2563409651479414, 'gender_output_acc': 0.7782258064516129, 'gender_output_loss': 1.9108689062057003, 'image_quality_output_acc': 0.4737903225806452, 'image_quality_output_loss': 3.8108198412003054, 'loss': 27.689685267786825, 'pose_output_acc': 0.7469758064516129, 'pose_output_loss': 2.3652066415356052, 'weight_output_acc': 0.5695564516129032, 'weight_output_loss': 3.648593471896264}
+
+LOG:
+----------------------
+
 Epoch 00001: LearningRateScheduler setting learning rate to 0.003.
 360/360 [==============================] - 110s 306ms/step - loss: 7.9465 - gender_output_loss: 0.6877 - image_quality_output_loss: 0.9920 - age_output_loss: 1.4388 - weight_output_loss: 1.0019 - bag_output_loss: 0.9235 - footwear_output_loss: 1.0463 - pose_output_loss: 0.9359 - emotion_output_loss: 0.9205 - gender_output_acc: 0.5600 - image_quality_output_acc: 0.5510 - age_output_acc: 0.3985 - weight_output_acc: 0.6306 - bag_output_acc: 0.5661 - footwear_output_acc: 0.4446 - pose_output_acc: 0.6167 - emotion_output_acc: 0.7142 - val_loss: 7.9840 - val_gender_output_loss: 0.6849 - val_image_quality_output_loss: 0.9841 - val_age_output_loss: 1.4495 - val_weight_output_loss: 0.9849 - val_bag_output_loss: 0.9401 - val_footwear_output_loss: 1.0445 - val_pose_output_loss: 0.9278 - val_emotion_output_loss: 0.9682 - val_gender_output_acc: 0.5635 - val_image_quality_output_acc: 0.5559 - val_age_output_acc: 0.3659 - val_weight_output_acc: 0.6401 - val_bag_output_acc: 0.5479 - val_footwear_output_acc: 0.4425 - val_pose_output_acc: 0.6149 - val_emotion_output_acc: 0.6845
 
